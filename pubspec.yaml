@@ -1,0 +1,44 @@
+name: mudem_app
+description: "A new Flutter project."
+# La ligne suivante empêche le package d'être accidentellement publié sur pub.dev en utilisant `flutter pub publish`.
+# Cela est préférable pour les packages privés.
+publish_to: 'none' # Supprimez cette ligne si vous souhaitez publier sur pub.dev
+
+# La section suivante définit la version et le numéro de build de votre application.
+# Un numéro de version est composé de trois chiffres séparés par des points, comme 1.2.43,
+# suivi d'un numéro de build optionnel séparé par un +.
+# La version et le numéro de build peuvent être surchargés dans `flutter build` en spécifiant --build-name et --build-number, respectivement.
+# Sur Android, build-name est utilisé comme versionName tandis que build-number est utilisé comme versionCode.
+# Lisez-en plus sur le versionnement Android à l'adresse https://developer.android.com/studio/publish/versioning
+# Sur iOS, build-name est utilisé comme CFBundleShortVersionString tandis que build-number est utilisé comme CFBundleVersion.
+# Lisez-en plus sur le versionnement iOS à l'adresse
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# Sur Windows, build-name est utilisé comme partie majeure, mineure et de correctif des versions du produit et des fichiers, tandis que build-number est utilisé comme suffixe de build.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.6 <4.0.0'
+
+# Les dépendances spécifient les autres packages dont votre package a besoin pour fonctionner.
+# Pour mettre automatiquement à jour les dépendances de votre package vers les dernières versions,
+# considérez d'exécuter `flutter pub upgrade --major-versions`. Alternativement,
+# les dépendances peuvent être mises à jour manuellement en modifiant les numéros de version ci-dessous
+# à la dernière version disponible sur pub.dev. Pour voir quelles dépendances ont de nouvelles versions disponibles,
+# exécutez `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+  mysql1: 0.20.0
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+# Pour des informations sur la partie Dart générique de ce fichier, consultez la
+# page suivante : https://dart.dev/tools/pub/pubspec
+
+# La section suivante est spécifique aux packages Flutter.
+flutter:
+  uses-material-design: true
