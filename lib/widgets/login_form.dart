@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mudem_app/main.dart'; // Importez le fichier contenant MyApp
+import 'package:mudem_app/screens/home_screen.dart'; // Importez votre fichier HomeScreen.dart
+
 
 class LoginForm extends StatefulWidget {
   @override
@@ -68,12 +70,12 @@ class _LoginFormState extends State<LoginForm> {
   }
 
   void _submitForm() {
-    if (_formKey.currentState != null && _formKey.currentState!.validate()) {
-      // Logique de connexion réussie
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => MyApp()), // Utilisez MyApp comme page d'accueil
-      );
-    }
+  if (_formKey.currentState != null && _formKey.currentState!.validate()) {
+    // Logique de connexion réussie
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => HomeScreen()), // Rediriger vers la page HomeScreen
+    );
   }
+}
 }
